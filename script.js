@@ -60,6 +60,7 @@ function stopTimer(playerIndex) {
 // Loop through all the player buttons and add event listeners
 playerButtons.forEach((button, index) => {
   button.addEventListener('click', () => {
+
     if (activePlayer == index){
       // Stop the timer for the current player
       stopTimer(activePlayer);
@@ -67,6 +68,7 @@ playerButtons.forEach((button, index) => {
       // Start the timer for the next player
       startTimer((index + 1) % numPlayers);
     }
+
   });
 });
 
